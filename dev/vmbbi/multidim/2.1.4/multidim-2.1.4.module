@@ -85,10 +85,10 @@
           "name": "multidim-2.1.4-sources.jar",
           "url": "multidim-2.1.4-sources.jar",
           "size": 17020,
-          "sha512": "33ee9473cafd3f34a563591ca0e52ec3977de04c7f03922c0214b88f0f6304e0b4fd17f9a4d4056d8f6da407bdd4974b2b8dc0282d6ef3267670fb84db741c42",
-          "sha256": "4348c14b3853613b5d9eaa49665892c663b6a9f9e39f4b65ef7d623dcd723c6d",
-          "sha1": "e318d1272f1776378ae1d9195fe5d51de898266b",
-          "md5": "9c85377fe69c5a44255d311d344714b6"
+          "sha512": "70030b3542882b75e20e6148df89230deb89610d6b9b3147eafe2283eb3c321ccf9b547c23edf5d615a880580b8c082a9bd40e21247360a9fcf0fe37bda425ad",
+          "sha256": "a54a5b1dc1438034fff9f6fb0101c4a627fc1bdf707848adf6b7320a549b334c",
+          "sha1": "d6015977ba26659dbddfe06e85b5cbc28fce99f8",
+          "md5": "5243179978a7286019dcbd85bfee6a8f"
         }
       ]
     }
