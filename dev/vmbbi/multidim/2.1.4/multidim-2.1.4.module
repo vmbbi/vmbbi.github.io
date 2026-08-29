@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.vmbbi",
+    "module": "multidim",
+    "version": "2.1.4",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "multidim-2.1.4.jar",
+          "url": "multidim-2.1.4.jar",
+          "size": 49718,
+          "sha512": "28ff5dfdcce2a0519aeacd22c3b5bd8879808eacbf0ce5d65cfc12a949e17bd59ca118136e3aacaa7bd2352650aee581369494b36ab88a66985157e56ad01a59",
+          "sha256": "d15ffed08ec80c375fe0d81fd8b55b306cebf4575f4b22a63c8f95ca0215ff8b",
+          "sha1": "797ab524e3190cbc579ddfcbed019a79c147b598",
+          "md5": "1d1d0bc3677dc1a0226a24bec07bf66a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.10"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.116.15+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "multidim-2.1.4.jar",
+          "url": "multidim-2.1.4.jar",
+          "size": 49718,
+          "sha512": "28ff5dfdcce2a0519aeacd22c3b5bd8879808eacbf0ce5d65cfc12a949e17bd59ca118136e3aacaa7bd2352650aee581369494b36ab88a66985157e56ad01a59",
+          "sha256": "d15ffed08ec80c375fe0d81fd8b55b306cebf4575f4b22a63c8f95ca0215ff8b",
+          "sha1": "797ab524e3190cbc579ddfcbed019a79c147b598",
+          "md5": "1d1d0bc3677dc1a0226a24bec07bf66a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "multidim-2.1.4-sources.jar",
+          "url": "multidim-2.1.4-sources.jar",
+          "size": 17020,
+          "sha512": "33ee9473cafd3f34a563591ca0e52ec3977de04c7f03922c0214b88f0f6304e0b4fd17f9a4d4056d8f6da407bdd4974b2b8dc0282d6ef3267670fb84db741c42",
+          "sha256": "4348c14b3853613b5d9eaa49665892c663b6a9f9e39f4b65ef7d623dcd723c6d",
+          "sha1": "e318d1272f1776378ae1d9195fe5d51de898266b",
+          "md5": "9c85377fe69c5a44255d311d344714b6"
+        }
+      ]
+    }
+  ]
+}
