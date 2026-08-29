@@ -19,7 +19,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 21,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-api"
       },
@@ -27,11 +27,11 @@
         {
           "name": "multidim-2.1.4-1.21.1.jar",
           "url": "multidim-2.1.4-1.21.1.jar",
-          "size": 49668,
-          "sha512": "40784731611691563f8b7ebaf2b2990041b749893cd7f05fbf3bf7d853f9271aba8352e7c1294b7aaf9d0ee3d96585097157d65dd2971a9370b166b811da4b3c",
-          "sha256": "3224b57e78b563cf88f04261d80578eb8d0f1d93a71ded5e63c56758f16ef5fe",
-          "sha1": "6d85f3abb8c145f0aca890128c5ac2d5d419ab1f",
-          "md5": "4aecdaec4e191e4f01e8c3de4c42dddc"
+          "size": 49665,
+          "sha512": "92b3d888e5dc9b709905434a47313f23d632f132c7825254bb1afc0514d6f0d44af80b0a03c2895a5a57bce0b02072a797c9d1b7b684ecb4ce327ee24b1eb550",
+          "sha256": "27a8a325f791b3153041807776e88a607f9b9bb38719a62c56aa4ef98e4292e4",
+          "sha1": "a18c6b9d3529438c6356b4dc58f3f3898fd551aa",
+          "md5": "213136606874a7ddb3db1eb7f9a8437d"
         }
       ]
     },
@@ -40,7 +40,7 @@
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
-        "org.gradle.jvm.version": 17,
+        "org.gradle.jvm.version": 21,
         "org.gradle.libraryelements": "jar",
         "org.gradle.usage": "java-runtime"
       },
@@ -64,11 +64,11 @@
         {
           "name": "multidim-2.1.4-1.21.1.jar",
           "url": "multidim-2.1.4-1.21.1.jar",
-          "size": 49668,
-          "sha512": "40784731611691563f8b7ebaf2b2990041b749893cd7f05fbf3bf7d853f9271aba8352e7c1294b7aaf9d0ee3d96585097157d65dd2971a9370b166b811da4b3c",
-          "sha256": "3224b57e78b563cf88f04261d80578eb8d0f1d93a71ded5e63c56758f16ef5fe",
-          "sha1": "6d85f3abb8c145f0aca890128c5ac2d5d419ab1f",
-          "md5": "4aecdaec4e191e4f01e8c3de4c42dddc"
+          "size": 49665,
+          "sha512": "92b3d888e5dc9b709905434a47313f23d632f132c7825254bb1afc0514d6f0d44af80b0a03c2895a5a57bce0b02072a797c9d1b7b684ecb4ce327ee24b1eb550",
+          "sha256": "27a8a325f791b3153041807776e88a607f9b9bb38719a62c56aa4ef98e4292e4",
+          "sha1": "a18c6b9d3529438c6356b4dc58f3f3898fd551aa",
+          "md5": "213136606874a7ddb3db1eb7f9a8437d"
         }
       ]
     },
@@ -85,10 +85,10 @@
           "name": "multidim-2.1.4-1.21.1-sources.jar",
           "url": "multidim-2.1.4-1.21.1-sources.jar",
           "size": 17028,
-          "sha512": "3415f99069d58ee3fc1e77447eaeef4212e35d16a54bae5ec299c8bdb6c98548ad81e61a4b553408ca02edf0b2568e1776bafd1523ee9bcd60cde506b47d841b",
-          "sha256": "fc0a178dae1c49c49e2e0a48dded8dcc16712b91410bdaeeeda5a73ed912bae8",
-          "sha1": "9c7de86fb4436d1d2aeb37f4fb026e2e92bdc263",
-          "md5": "a0517cdee9d0390f8b7c4a2ef36bb19e"
+          "sha512": "c0a2a72d1d083816a5e101e7df562b6dc2edd4f6bf24b079b3e4c6d3922bf7f6f8f5cf97e69bd66a2dc14a20415407954e86ab69a4ac2f02b9c0865223678b00",
+          "sha256": "a80d6886ae056a22c5d4dcedb7cc18a5ac30e5f603fe6818d6d828eb10600cad",
+          "sha1": "16ec76976410dd20f61df872ee5c61a239d0d301",
+          "md5": "2660c594f449978a4d110ae74cd02cfb"
         }
       ]
     }
