@@ -27,11 +27,11 @@
         {
           "name": "multidim-2.1.4-1.21.1.jar",
           "url": "multidim-2.1.4-1.21.1.jar",
-          "size": 49721,
-          "sha512": "e26aaac9c2bac1a598e91589885306d7953350332c485be9df827193b7a735f0469a4dc5d38f50e693aca4abaa146fdb820c65d98fed02159755c6c7a721e622",
-          "sha256": "07827eb98783f2b922d0763d93946988aa3c148a10eafcdeec35c50ac41f66fb",
-          "sha1": "16276d7f26c4edc8d3961bf78a78eb7b57d005b2",
-          "md5": "7a89fdb7c109a942a3d7b55851c0243a"
+          "size": 49669,
+          "sha512": "a307d6fadffdefdeaa16f5009bc086af7fed17586cb8be9d4b3b80f48d9febe4626d5b220244dd10d5334ac65dee18dfff5eecf5ce43e86c60fa3ec3c93676c0",
+          "sha256": "e741bc1ac6713dde0d8d130caa8f8575be18b003a1dbbe4a0f64b75f04762a87",
+          "sha1": "c8c9c70c653e7b56139e6a90193f4b632c7874ce",
+          "md5": "c56a47deebc68f757de27ec206a47109"
         }
       ]
     },
@@ -64,11 +64,11 @@
         {
           "name": "multidim-2.1.4-1.21.1.jar",
           "url": "multidim-2.1.4-1.21.1.jar",
-          "size": 49721,
-          "sha512": "e26aaac9c2bac1a598e91589885306d7953350332c485be9df827193b7a735f0469a4dc5d38f50e693aca4abaa146fdb820c65d98fed02159755c6c7a721e622",
-          "sha256": "07827eb98783f2b922d0763d93946988aa3c148a10eafcdeec35c50ac41f66fb",
-          "sha1": "16276d7f26c4edc8d3961bf78a78eb7b57d005b2",
-          "md5": "7a89fdb7c109a942a3d7b55851c0243a"
+          "size": 49669,
+          "sha512": "a307d6fadffdefdeaa16f5009bc086af7fed17586cb8be9d4b3b80f48d9febe4626d5b220244dd10d5334ac65dee18dfff5eecf5ce43e86c60fa3ec3c93676c0",
+          "sha256": "e741bc1ac6713dde0d8d130caa8f8575be18b003a1dbbe4a0f64b75f04762a87",
+          "sha1": "c8c9c70c653e7b56139e6a90193f4b632c7874ce",
+          "md5": "c56a47deebc68f757de27ec206a47109"
         }
       ]
     },
@@ -84,11 +84,11 @@
         {
           "name": "multidim-2.1.4-1.21.1-sources.jar",
           "url": "multidim-2.1.4-1.21.1-sources.jar",
-          "size": 17020,
-          "sha512": "4e116f577e7c6fdddd91d4fbba2a82523a42f7e04be0a05b4a0c220164eecb763977edc774ca5e233f81aa15b4af39170d139838cd5a2039f3e5d86ef81ea98e",
-          "sha256": "448ef7477ab75ba7e14901ef5a1abdea381acfdb9f8e85d426263bac0994b242",
-          "sha1": "7fc48db956737af9c6d19ce2dcff71874bc5b2ff",
-          "md5": "53c41e1ffce2207a3e26e1293bbd2926"
+          "size": 17065,
+          "sha512": "b1843d3901aa18a0867d99a22c9dfd3d0f32a1747ba1ebe519db91746b6856f55f02e8081f5849dabdd9b94aaec0ca25556734fa95e38e9f87c058d0420a9b4d",
+          "sha256": "02fd20b34279634098b6a9aa2100cf1bfb0927f7e21307ea48def5b74370962c",
+          "sha1": "be8ce3573c28474a97c6d048c5877320011352f9",
+          "md5": "ecea71009e0d7dab5cb577fcd9026f93"
         }
       ]
     }
