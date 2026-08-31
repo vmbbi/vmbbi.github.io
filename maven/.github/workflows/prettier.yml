@@ -1,0 +1,33 @@
+name: Prettier Format
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Prettier Action
+        uses: creyD/prettier_action@v4.6
+        with:
+          same_commit: true
+          prettier_plugins: "prettier-plugin-astro"
+          prettier_options: --write "**/*.{js,jsx,astro,css,json}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
