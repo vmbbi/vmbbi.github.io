@@ -50,11 +50,11 @@
         {
           "name": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
           "url": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
-          "size": 682457,
-          "sha512": "afdf7a582e763672c52bf74f443f1a0bf467669b2c0ac2caaa5fbb4234e588a824da46971d68b8048a8d96e7c539ef09ff6722b43f974a3eb8cf75d931dbb895",
-          "sha256": "ceaa5211015d85c86b61b6771213f1023496543dcc7e660aaa544eeccd116f97",
-          "sha1": "84da603cdae591a5b1825b704894d44d61beb5bf",
-          "md5": "27bd2bd76d5d12138a89065ff953461e"
+          "size": 682809,
+          "sha512": "45701fcdc6e27b78bee469d5187ae4c05cced6f555d8323be5d7bd0fdc053f01b3be92ee938df206f5a1cd01757b0ba9987fc20e1cc718c50e1a58c98004db44",
+          "sha256": "8c613bf6b29b438d53a9269ba3768f6f33bef949a90ca92beb3a96de14bc80ff",
+          "sha1": "7fede8162aa1a2493d70615ee539d622f134c8f9",
+          "md5": "105bda7320ec9719cd0763d0dcbbce8d"
         }
       ]
     },
@@ -115,11 +115,11 @@
         {
           "name": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
           "url": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
-          "size": 682457,
-          "sha512": "afdf7a582e763672c52bf74f443f1a0bf467669b2c0ac2caaa5fbb4234e588a824da46971d68b8048a8d96e7c539ef09ff6722b43f974a3eb8cf75d931dbb895",
-          "sha256": "ceaa5211015d85c86b61b6771213f1023496543dcc7e660aaa544eeccd116f97",
-          "sha1": "84da603cdae591a5b1825b704894d44d61beb5bf",
-          "md5": "27bd2bd76d5d12138a89065ff953461e"
+          "size": 682809,
+          "sha512": "45701fcdc6e27b78bee469d5187ae4c05cced6f555d8323be5d7bd0fdc053f01b3be92ee938df206f5a1cd01757b0ba9987fc20e1cc718c50e1a58c98004db44",
+          "sha256": "8c613bf6b29b438d53a9269ba3768f6f33bef949a90ca92beb3a96de14bc80ff",
+          "sha1": "7fede8162aa1a2493d70615ee539d622f134c8f9",
+          "md5": "105bda7320ec9719cd0763d0dcbbce8d"
         }
       ]
     },
@@ -135,11 +135,11 @@
         {
           "name": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1-sources.jar",
           "url": "lib-1.1.16+1.21.1-fix-1.21.1-trust-bro-trust-dev+mc.1.21.1-sources.jar",
-          "size": 351924,
-          "sha512": "c552348d38c49be2453eb16c9b5af91fd3f69ed5f3a5b4ee1b8352041f75ec5b962c8ef342a62acdb6aa2868add440ea5f0bb1079edaf9d1ce1c3ae06ee5870f",
-          "sha256": "e5f4d44ab8ed8994b260c584b180a95a5dab2eae02cabe20c0f00cd56523fb42",
-          "sha1": "19b30e2c0f7aad22b881a463acd7a1f4815fbe09",
-          "md5": "b04b56a3c7ee21826379c544fc1bc2bc"
+          "size": 352104,
+          "sha512": "4f3879bea7ec2d65b79ff1576ada0e9653c2dd18aa93f4798595945abc11986b7aaea68c4853471113b488be61781565e27609fbb1b3eb19936f8d70cf38dcd2",
+          "sha256": "06f103cad2bff08b2faa88737bf8df7fca054383340e786f8972861292a15f0a",
+          "sha1": "bf046b5b07a8a47cb4db28ebaeb6d7994dd4333f",
+          "md5": "c79b6db64b6706d9ce0b55ff874f37ed"
         }
       ]
     }
