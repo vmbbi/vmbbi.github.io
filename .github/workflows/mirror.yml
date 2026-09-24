@@ -3,7 +3,7 @@ on: [push, delete]
 
 jobs:
   mirror:
-    runs-on: docker
+    runs-on: codeberg-tiny
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
