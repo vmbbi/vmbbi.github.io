@@ -1,0 +1,16 @@
+---
+import Greeting from "../components/Greeting";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "HOMEPAGE";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <Greeting client:load messages={["hi", "hello", "secret special hi"]} />
+  <p>Well, I don't really know what to put here so...</p>
+  <p>here's a list of games i like:</p>
+  <ul>
+    <li>Minecraft</li>
+    <li>Satisfactory</li>
+    <li>Shapez 2</li>
+  </ul>
+</BaseLayout>

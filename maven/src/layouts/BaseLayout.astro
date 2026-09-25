@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { Font } from "astro:assets";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/gif" href="/vortex.gif" />
+    <link rel="icon" href="/vortex.gif" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <Font cssVariable="--font-minecraft" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>{pageTitle}</h1>
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import "../scripts/menu";
+    </script>
+  </body>
+</html>
