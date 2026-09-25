@@ -104,6 +104,17 @@ li {
   font-family: var(--font-minecraft);
   color: #88e4e4;
 }
+.dark button:hover {
+  margin: 0.25em;
+  border: solid 1px #a1a1a1;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1.15em;
+  background-color: #0882f5;
+  font-family: var(--font-minecraft);
+  color: #88e4e4;
+  cursor: pointer;
+}
 button {
   margin: 0.25em;
   border: solid 1px #121f3a;
@@ -113,6 +124,17 @@ button {
   background-color: #15df8d;
   font-family: var(--font-minecraft);
   color: #0f0c37;
+}
+button:hover{
+  margin: 0.25em;
+  border: solid 1px #121f3a;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1.15em;
+  background-color: #155cdf;
+  font-family: var(--font-minecraft);
+  color: #0f0c37;
+  cursor: pointer;
 }
 .nav-links {
   width: 100%;
