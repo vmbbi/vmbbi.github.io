@@ -1,0 +1,23 @@
+name: Push Mirror to Remote
+on: [push, delete]
+
+jobs:
+  mirror:
+    runs-on: codeberg-tiny
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Target
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "${{ secrets.TARGET_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          
+          # Replace with your destination remote string
+          git remote add target git@github.com:vmbbi/vmbbi.github.io.git
+          git push target --prune --all --force
+          git push target --prune --tags --force

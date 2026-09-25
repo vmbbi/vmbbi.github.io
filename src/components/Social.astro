@@ -1,0 +1,12 @@
+---
+const { platform, username, tld } = Astro.props;
+---
+
+<a href={`https://www.${platform}.${tld}/${username}`}
+  ><img
+    src=`https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact-minimal/available/${platform}_vector.svg`
+    alt={platform}
+    height="32"
+    style="vertical-align: middle; margin: 0.5rem"
+  />{platform}</a
+>

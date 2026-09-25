@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "ICT Learning (WIP)";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>This is where i learn my ICT</h2>
+  <h3>These are some games for me to study and remember</h3>
+  <ul>
+    <li class="dropdown">
+      <button onclick="toggleDropdown(event, 'A1Dropdown')" class="dropbtn"
+        >ICT compulsory A1 Book</button
+      >
+      <div id="A1Dropdown" class="dropdown-content">
+        <a href="/ict/a1/ch1">Ch.1</a>
+        <a href="/ict/a1/ch2">Ch.2</a>
+        <a href="/ict/a1/ch3">Ch.3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <button onclick="toggleDropdown(event, 'A2Dropdown')" class="dropbtn"
+        >ICT compulsory A2 Book</button
+      >
+      <div id="A2Dropdown" class="dropdown-content">
+        <a href="/ict/a2/ch1">Ch.1</a>
+        <a href="/ict/a2/ch2">Ch.2</a>
+        <a href="/ict/a2/ch3">Ch.3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <button onclick="toggleDropdown(event, 'BDropdown')" class="dropbtn"
+        >ICT compulsory B Book</button
+      >
+      <div id="BDropdown" class="dropdown-content">
+        <a href="/ict/b/ch1">Ch.1</a>
+        <a href="/ict/b/ch2">Ch.2</a>
+        <a href="/ict/b/ch3">Ch.3</a>
+      </div>
+    </li>
+  </ul>
+</BaseLayout>
+<script>
+  import "../../scripts/dropdown";
+</script>
+<style>
+  ul {
+    padding-left: 2rem;
+  }
+
+  li.dropdown {
+    display: list-item;
+    list-style-type: disc;
+  }
+</style>
