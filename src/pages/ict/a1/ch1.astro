@@ -1,0 +1,95 @@
+---
+import Layout from '../../../layouts/ICTLayout.astro';
+---
+
+<Layout title="Chapter 1: Information System">
+  <section class="space-y-6">
+    <h1 class="text-4xl font-bold text-cyan-400">Chapter 1: Information System</h1>
+    
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">1.1 & 1.2 Data vs Information</h2>
+        <p class="text-slate-300 text-sm"><strong>Data</strong> is raw, unorganized facts. <strong>Information</strong> is processed data that has meaning and context.</p>
+        <p class="text-slate-400 text-xs mt-2">Example: "85" (Data) + "Math Test Score" (Context) = "You got a B in Math" (Information).</p>
+      </div>
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">1.3 Information Processing</h2>
+        <p class="text-slate-300 text-sm">The processing cycle follows: <strong>Input ➔ Processing ➔ Output ➔ Storage</strong>.</p>
+      </div>
+      <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 md:col-span-2">
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">1.4 Information Age</h2>
+        <p class="text-slate-300 text-sm">We live in an era characterized by rapid information shift, relying on IoT, Big Data, and Cloud Computing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME SECTION -->
+  <section class="bg-slate-900 p-6 rounded-2xl border border-cyan-500/30">
+    <h2 class="text-2xl font-bold text-cyan-400 mb-2">🎮 Game: Data Alchemist</h2>
+    <p class="text-sm text-amber-400 mb-6">Select 1 Raw Data and 1 Context to brew useful Information!</p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="font-bold text-slate-300 mb-2">🧊 Raw Data</h3>
+        <div class="flex flex-col gap-2" id="data-list">
+          <button onclick="selectData('39.5')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-cyan-400 transition" id="d-39.5">39.5</button>
+          <button onclick="selectData('10110')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-cyan-400 transition" id="d-10110">10110</button>
+          <button onclick="selectData('John')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-cyan-400 transition" id="d-John">John</button>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-300 mb-2">📖 Context</h3>
+        <div class="flex flex-col gap-2" id="context-list">
+          <button onclick="selectContext('Binary Code')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-emerald-400 transition" id="c-binary">Binary Code</button>
+          <button onclick="selectContext('Patient Temperature')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-emerald-400 transition" id="c-temp">Patient Temperature</button>
+          <button onclick="selectContext('Student Name')" class="p-3 bg-slate-800 border border-slate-700 rounded-lg text-left hover:border-emerald-400 transition" id="c-name">Student Name</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 p-6 bg-slate-950 border border-slate-800 rounded-xl text-center min-h-[100px]">
+      <p class="text-sm text-slate-500">Cauldron Result:</p>
+      <h3 id="result" class="text-xl font-bold text-cyan-300 mt-2">Waiting for ingredients...</h3>
+    </div>
+  </section>
+
+  <script is:inline>
+    let selectedData = null;
+    let selectedContext = null;
+
+    const recipes = {
+      "39.5|Patient Temperature": "Information: The patient has a high fever! 🤒",
+      "10110|Binary Code": "Information: The decimal value is 22! 💻",
+      "John|Student Name": "Information: John is registered for the ICT class! 🎒"
+    };
+
+    function selectData(val) {
+      selectedData = val;
+      checkBrew();
+    }
+    
+    function selectContext(val) {
+      selectedContext = val;
+      checkBrew();
+    }
+
+    function checkBrew() {
+      const resultBox = document.getElementById('result');
+      if (selectedData && selectedContext) {
+        const key = `${selectedData}|${selectedContext}`;
+        if (recipes[key]) {
+          resultBox.innerText = `✨ ${recipes[key]} ✨`;
+          resultBox.className = "text-xl font-bold text-emerald-400 mt-2 animate-bounce";
+          selectedData = null; selectedContext = null; // reset
+        } else {
+          resultBox.innerText = "❌ Incompatible mix! Just meaningless gibberish.";
+          resultBox.className = "text-xl font-bold text-red-400 mt-2";
+          selectedData = null; selectedContext = null;
+        }
+      } else {
+        resultBox.innerText = `Adding: ${selectedData || '?'} + ${selectedContext || '?'}...`;
+        resultBox.className = "text-xl font-bold text-amber-300 mt-2";
+      }
+    }
+  </script>
+</Layout>
