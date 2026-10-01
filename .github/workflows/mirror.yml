@@ -1,5 +1,10 @@
 name: Push Mirror to Remote
-on: [push, delete, workflow_dispatch]
+
+on:
+  push:
+    branches: ["master", "maven"]
+  delete:
+  workflow_dispatch:
 
 jobs:
   mirror:
