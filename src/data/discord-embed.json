@@ -32,8 +32,8 @@
       {
         "type": 1,
         "components": [
-          { "type": 2, "style": 5, "url": "https://github.com/vmbbi", "label": "Github" },
-          { "type": 2, "style": 5, "url": "https://codeberg.org/vmbbi", "label": "Codeberg" }
+          { "type": 2, "style": 5, "url": "https://github.com/vmbbi", "emoji": "<:codeberg:1555194497498095667>", "label": "Github" },
+          { "type": 2, "style": 5, "url": "https://codeberg.org/vmbbi", "emoji": "<:github:1555194447921418310>", "label": "Codeberg" }
         ]
       }
     ]
