@@ -1,10 +1,12 @@
 name: Push Mirror to Remote
-
 on:
   push:
     branches: ["master", "maven"]
-  delete:
   workflow_dispatch:
+
+concurrency:
+  group: mirror-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   mirror:
@@ -23,7 +25,6 @@ jobs:
           echo "${{ secrets.TARGET_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           
-          # Replace with your destination remote string
-          git remote add target git@github.com:vmbbi/vmbbi.github.io.git
-          git push target --prune --all --force
-          git push target --prune --tags --force
+          git remote add target git@github.com:vmbbi/vmbbi.github.io.git || git remote set-url target git@github.com:vmbbi/vmbbi.github.io.git
+          git push target master maven --force
+          git push target --tags --force

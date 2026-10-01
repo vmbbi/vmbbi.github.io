@@ -5,6 +5,10 @@ on:
     branches: ["master", "maven"]
   workflow_dispatch:
 
+concurrency:
+  group: prettier-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   prettier:
     runs-on: ubuntu-latest
