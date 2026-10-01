@@ -1,0 +1,147 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.vmbbi",
+    "module": "lib",
+    "version": "1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "dev.vmbbi",
+          "module": "multidim",
+          "version": {
+            "requires": "2.1.6-1.21.1"
+          }
+        },
+        {
+          "group": "dev.drtheo",
+          "module": "scheduler",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "dev.drtheo",
+          "module": "queue",
+          "version": {
+            "requires": "1.1.0-1.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
+          "url": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
+          "size": 682428,
+          "sha512": "bd7129e618a5afc895ce04c9ce373633a95e3e2f8eba8fcc3e6e30d152425e2cc4868a6fc156ced269666917ec23ab9233c327f4e43a5794d809d20ba0956663",
+          "sha256": "6d6e6682247e57c93a578cf1f1e2be16cb99dd279ed41fa2c018811470de78b1",
+          "sha1": "f1b3b1cd08723b02920eab7f1feb971ea7012f89",
+          "md5": "e96da6794bdfd5dc270d17b46f4122cf"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "net.objecthunter",
+          "module": "exp4j",
+          "version": {
+            "requires": "0.4.8"
+          }
+        },
+        {
+          "group": "dev.vmbbi",
+          "module": "multidim",
+          "version": {
+            "requires": "2.1.6-1.21.1"
+          }
+        },
+        {
+          "group": "dev.drtheo",
+          "module": "scheduler",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "dev.drtheo",
+          "module": "queue",
+          "version": {
+            "requires": "1.1.0-1.20"
+          }
+        },
+        {
+          "group": "net.fabricmc",
+          "module": "fabric-loader",
+          "version": {
+            "requires": "0.16.10"
+          }
+        },
+        {
+          "group": "net.fabricmc.fabric-api",
+          "module": "fabric-api",
+          "version": {
+            "requires": "0.116.15+1.21.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
+          "url": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1.jar",
+          "size": 682428,
+          "sha512": "bd7129e618a5afc895ce04c9ce373633a95e3e2f8eba8fcc3e6e30d152425e2cc4868a6fc156ced269666917ec23ab9233c327f4e43a5794d809d20ba0956663",
+          "sha256": "6d6e6682247e57c93a578cf1f1e2be16cb99dd279ed41fa2c018811470de78b1",
+          "sha1": "f1b3b1cd08723b02920eab7f1feb971ea7012f89",
+          "md5": "e96da6794bdfd5dc270d17b46f4122cf"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1-sources.jar",
+          "url": "lib-1.1.16+1.21.1-1.21.1-trust-bro-trust-dev+mc.1.21.1-sources.jar",
+          "size": 351871,
+          "sha512": "448e2e1f744ea595f8467e7b372e740c6fca3a63d2e4d963a3ace7160fac3dbc03f4472ebeb27f574aa283e25dca3bfabe3d71f3b7462e719d76e88db6bfcab4",
+          "sha256": "e553577d3a1219ce7d073e73a5bc73c0896e54c05499d66870ee01c9fef09324",
+          "sha1": "33e9689990aaa8476bd8af1b7ad8c9e22b499c38",
+          "md5": "afa4f9c64158c0b2a31421a7d810f9de"
+        }
+      ]
+    }
+  ]
+}
