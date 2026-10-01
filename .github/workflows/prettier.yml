@@ -2,6 +2,7 @@ name: Prettier Format
 
 on:
   push:
+    branches: ["master", "maven"]
   workflow_dispatch:
 
 jobs:
@@ -12,13 +13,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          fetch-depth: '0'
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
@@ -28,7 +29,8 @@ jobs:
       - name: Prettier Action
         uses: creyD/prettier_action@v4.6
         with:
-          same_commit: true
+          commit_message: "style: auto-format code [skip ci]"
+          same_commit: false
           prettier_plugins: "prettier-plugin-astro"
           prettier_options: --write "**/*.{js,jsx,astro,css,json}"
           github_token: ${{ secrets.GITHUB_TOKEN }}
