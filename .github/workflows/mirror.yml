@@ -26,5 +26,6 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           
           git remote add target git@github.com:vmbbi/vmbbi.github.io.git || git remote set-url target git@github.com:vmbbi/vmbbi.github.io.git
-          git push target master maven --force
+            
+          git push target master refs/remotes/origin/maven:refs/heads/maven --force
           git push target --tags --force
