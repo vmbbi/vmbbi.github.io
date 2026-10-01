@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { Font } from "astro:assets";
 const { pageTitle } = Astro.props;
+import embedData from "../data/discord-embed.json"
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@ const { pageTitle } = Astro.props;
     <meta charset="utf-8" />
     <link rel="icon" type="image/gif" href="/vortex.gif" />
     <link rel="icon" href="/vortex.gif" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
@@ -19,9 +21,15 @@ const { pageTitle } = Astro.props;
     <meta property="og:description" content="My website that has a blog">
     <meta property="og:url" content="https://vmbbi.is-a.dev">
     <meta property="og:image" content="https://vmbbi.is-a.dev/vortex.gif">
+    <meta property="og:type" content="website">
 
     <meta name="theme-color" content="#1105f5">
     <Font cssVariable="--font-minecraft" />
+    <script
+        id="discord:component-embed"
+        type="application/json"
+        set:html={JSON.stringify(embedData)}
+    />
   </head>
   <body>
     <Header />

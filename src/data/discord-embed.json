@@ -1,0 +1,41 @@
+{
+  "component": {
+    "type": 17,
+    "spoiler": false,
+    "accent_color": 1115637,
+    "components": [
+      {
+        "type": 9,
+        "components": [
+          {
+            "type": 10,
+            "content": "# **[vmbbi's empty place](https://vmbbi.is-a.dev)**\nIts where i play with stuff and see if it works :)"
+          }
+        ],
+        "accessory": {
+          "type": 2,
+          "style": 5,
+          "url": "https://vmbbi.is-a.dev/",
+          "label": "Open"
+        }
+      },
+      {
+        "type": 12,
+        "items": [
+          { "media": { "url": "https://vmbbi.is-a.dev/vortex.gif" }, "description": "The vortex stares back as you stare at it" }
+        ]
+      },
+      {
+        "type": 14,
+        "spacing": 1
+      },
+      {
+        "type": 1,
+        "components": [
+          { "type": 2, "style": 5, "url": "https://github.com/vmbbi", "label": "Github" },
+          { "type": 2, "style": 5, "url": "https://codeberg.org/vmbbi", "label": "Codeberg" }
+        ]
+      }
+    ]
+  }
+}
