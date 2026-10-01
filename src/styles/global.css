@@ -120,7 +120,7 @@ button {
   font-family: var(--font-minecraft);
   color: #0f0c37;
 }
-button:hover{
+button:hover {
   border-color: #121f3a;
   background-color: #155cdf;
   color: #0f0c37;
@@ -160,13 +160,14 @@ button:hover{
   display: unset;
 }
 .dropbtn {
-color: #121f3a;
+  color: #121f3a;
   text-decoration: none;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -181,7 +182,7 @@ color: #121f3a;
   position: absolute;
   background-color: #465ea1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 0.5rem;
 }
@@ -195,10 +196,15 @@ color: #121f3a;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #788ca8; border-radius: 0.5rem;}
+.dropdown-content a:hover {
+  background-color: #788ca8;
+  border-radius: 0.5rem;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
