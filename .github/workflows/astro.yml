@@ -75,7 +75,8 @@ jobs:
           name: codeberg-pages
           path: ${{ env.BUILD_PATH }}/dist
 
-      - name: Deploy to Codeberg Pages
+      - name: Deploy to Codeberg Pages    
+        working-directory: ${{ env.BUILD_PATH }}/dist
         run: |
           git init
           git checkout -b pages
