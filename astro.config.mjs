@@ -15,13 +15,11 @@ export default defineConfig({
       name: "Minecraft",
       cssVariable: "--font-minecraft",
       options: {
-        variants: [
-          {
+        variants: [{
             src: ["./src/assets/fonts/Minecraft.woff2"],
             weight: "normal",
             style: "normal",
-          },
-        ],
+          },],
       },
     },
   ],
