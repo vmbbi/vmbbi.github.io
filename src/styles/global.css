@@ -3,7 +3,7 @@
 }
 
 html.dark {
-  background-image: url("../../public/TARDISBG.jpg");
+  background-image: url("../assets/TARDISBG.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -92,6 +92,24 @@ p {
   color: azure;
 }
 li {
+  color: #0f0c37;
+}
+.dark span {
+  color: azure;
+}
+span {
+  color: #0f0c37;
+}
+.dark strong {
+  color: azure;
+}
+strong {
+  color: #0f0c37;
+}
+.dark div {
+  color: azure;
+}
+div {
   color: #0f0c37;
 }
 .dark button {
