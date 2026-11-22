@@ -23,18 +23,15 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: npm ci
+        run: bun ci
       - name: Prettier Action
         uses: creyD/prettier_action@v4.6
         with:
           commit_message: "style: auto-format code [skip ci]"
-          same_commit: false
+          same_commit: true
           prettier_plugins: "prettier-plugin-astro"
           prettier_options: --write "**/*.{js,jsx,astro,css,json}"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          githeub_token: ${{ secrets.GITHUB_TOKEN }}
