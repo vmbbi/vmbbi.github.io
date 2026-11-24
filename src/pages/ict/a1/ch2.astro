@@ -1,50 +1,113 @@
 ---
-import Layout from '../../../layouts/ICTLayout.astro';
+import Layout from "../../../layouts/ICTLayout.astro";
 ---
 
 <Layout title="Chapter 2: Data Control & Organization">
   <section class="space-y-6">
-    <h1 class="text-4xl font-bold text-cyan-400">Chapter 2: Data Control & Organization</h1>
-    
+    <h1 class="text-4xl font-bold text-cyan-400">
+      Chapter 2: Data Control & Organization
+    </h1>
+
     <div class="grid md:grid-cols-2 gap-4">
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">2.1 Data Hierarchy</h2>
-        <p class="text-slate-300 text-sm">Data is organized systematically: <br/> 
-        <code class="text-amber-300">Bit ➔ Byte (Character) ➔ Field ➔ Record ➔ File ➔ Database</code></p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          2.1 Data Hierarchy
+        </h2>
+        <p class="text-slate-300 text-sm">
+          Data is organized systematically: <br />
+          <code class="text-amber-300">
+            Bit ➔ Byte (Character) ➔ Field ➔ Record ➔ File ➔ Database
+          </code>
+        </p>
       </div>
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">2.2 Data Control</h2>
-        <p class="text-slate-300 text-sm"><strong>Validation:</strong> Computer checks if data is reasonable (e.g., Range check). <br/>
-        <strong>Verification:</strong> Human checks if data is correct (e.g., Double entry).</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          2.2 Data Control
+        </h2>
+        <p class="text-slate-300 text-sm">
+          <strong>Validation:</strong> Computer checks if data is reasonable
+          (e.g., Range check). <br />
+          <strong>Verification:</strong> Human checks if data is correct (e.g.,
+          Double entry).
+        </p>
       </div>
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">2.3 Database Functions</h2>
-        <p class="text-slate-300 text-sm">Databases reduce data redundancy, improve data consistency, and allow multiple users to access data concurrently.</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          2.3 Database Functions
+        </h2>
+        <p class="text-slate-300 text-sm">
+          Databases reduce data redundancy, improve data consistency, and allow
+          multiple users to access data concurrently.
+        </p>
       </div>
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">2.4 File Access Methods</h2>
-        <p class="text-slate-300 text-sm"><strong>Sequential:</strong> Read from beginning to end (e.g., Magnetic Tape). <br/>
-        <strong>Direct/Random:</strong> Go instantly to the exact record (e.g., SSD, HDD).</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          2.4 File Access Methods
+        </h2>
+        <p class="text-slate-300 text-sm">
+          <strong>Sequential:</strong> Read from beginning to end (e.g.,
+          Magnetic Tape). <br />
+          <strong>Direct/Random:</strong> Go instantly to the exact record
+          (e.g., SSD, HDD).
+        </p>
       </div>
     </div>
   </section>
 
   <!-- GAME SECTION -->
   <section class="bg-slate-900 p-6 rounded-2xl border border-cyan-500/30">
-    <h2 class="text-2xl font-bold text-cyan-400 mb-2">🎮 Game: Hierarchy Tower Hacker</h2>
-    <p class="text-sm text-amber-400 mb-6">Click the terms to build the tower in the exact CORRECT ascending order (Smallest to Largest)!</p>
+    <h2 class="text-2xl font-bold text-cyan-400 mb-2">
+      🎮 Game: Hierarchy Tower Hacker
+    </h2>
+    <p class="text-sm text-amber-400 mb-6">
+      Click the terms to build the tower in the exact CORRECT ascending order
+      (Smallest to Largest)!
+    </p>
 
-    <div class="flex flex-col-reverse items-center gap-1 mb-8 p-4 bg-slate-950 rounded-lg min-h-[250px]" id="tower">
+    <div
+      class="flex flex-col-reverse items-center gap-1 mb-8 p-4 bg-slate-950 rounded-lg min-h-[250px]"
+      id="tower"
+    >
       <!-- Stack appears here -->
     </div>
 
     <div class="flex flex-wrap justify-center gap-3" id="buttons">
-      <button onclick="stack('File')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">File</button>
-      <button onclick="stack('Record')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">Record</button>
-      <button onclick="stack('Bit')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">Bit</button>
-      <button onclick="stack('Byte')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">Byte</button>
-      <button onclick="stack('Database')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">Database</button>
-      <button onclick="stack('Field')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600">Field</button>
+      <button
+        onclick="stack('File')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        File
+      </button>
+      <button
+        onclick="stack('Record')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        Record
+      </button>
+      <button
+        onclick="stack('Bit')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        Bit
+      </button>
+      <button
+        onclick="stack('Byte')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        Byte
+      </button>
+      <button
+        onclick="stack('Database')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        Database
+      </button>
+      <button
+        onclick="stack('Field')"
+        class="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded shadow border border-slate-600"
+      >
+        Field
+      </button>
     </div>
   </section>
 
@@ -52,22 +115,29 @@ import Layout from '../../../layouts/ICTLayout.astro';
     const correctOrder = ["Bit", "Byte", "Field", "Record", "File", "Database"];
     let currentStep = 0;
 
-    window.stack = function(item) {
+    window.stack = function (item) {
       if (item === correctOrder[currentStep]) {
         // Correct
-        const block = document.createElement('div');
-        block.className = "w-64 py-2 text-center font-bold bg-cyan-700 text-white rounded shadow-lg border border-cyan-400 animate-pulse";
+        const block = document.createElement("div");
+        block.className =
+          "w-64 py-2 text-center font-bold bg-cyan-700 text-white rounded shadow-lg border border-cyan-400 animate-pulse";
         block.innerText = item;
-        document.getElementById('tower').appendChild(block);
+        document.getElementById("tower").appendChild(block);
         currentStep++;
 
         if (currentStep === correctOrder.length) {
-          setTimeout(() => alert("🎉 TOWER SECURED! You mastered the Data Hierarchy!"), 100);
+          setTimeout(
+            () => alert("🎉 TOWER SECURED! You mastered the Data Hierarchy!"),
+            100,
+          );
         }
       } else {
         // Wrong
-        document.getElementById('tower').innerHTML = '<p class="text-red-500 font-bold my-auto animate-bounce">CRASH! Wrong Order!</p>';
-        setTimeout(() => { document.getElementById('tower').innerHTML = ''; }, 1500);
+        document.getElementById("tower").innerHTML =
+          '<p class="text-red-500 font-bold my-auto animate-bounce">CRASH! Wrong Order!</p>';
+        setTimeout(() => {
+          document.getElementById("tower").innerHTML = "";
+        }, 1500);
         currentStep = 0;
       }
     };

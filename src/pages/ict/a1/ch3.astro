@@ -1,23 +1,44 @@
 ---
-import Layout from '../../../layouts/ICTLayout.astro';
+import Layout from "../../../layouts/ICTLayout.astro";
 ---
 
 <Layout title="Chapter 3: Data Representation">
   <section class="space-y-6">
-    <h1 class="text-4xl font-bold text-cyan-400">Chapter 3: Data Representation</h1>
-    
+    <h1 class="text-4xl font-bold text-cyan-400">
+      Chapter 3: Data Representation
+    </h1>
+
     <div class="grid md:grid-cols-2 gap-4">
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">3.1 & 3.2 Numbers & Encoding</h2>
-        <p class="text-slate-300 text-sm">Computers use <strong>Binary (0 and 1)</strong>. Characters are encoded using <strong>ASCII</strong> (English only) or <strong>Unicode / UTF-8</strong> (Global languages, Chinese characters).</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          3.1 & 3.2 Numbers & Encoding
+        </h2>
+        <p class="text-slate-300 text-sm">
+          Computers use <strong>Binary (0 and 1)</strong>. Characters are
+          encoded using <strong>ASCII</strong> (English only) or{" "}
+          <strong>Unicode / UTF-8</strong> (Global languages, Chinese
+          characters).
+        </p>
       </div>
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">3.3 Barcode Encoding</h2>
-        <p class="text-slate-300 text-sm">1D Barcodes represent data with parallel lines (UPC). 2D Barcodes (QR Codes) hold much more data and include error correction.</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          3.3 Barcode Encoding
+        </h2>
+        <p class="text-slate-300 text-sm">
+          1D Barcodes represent data with parallel lines (UPC). 2D Barcodes (QR
+          Codes) hold much more data and include error correction.
+        </p>
       </div>
       <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 md:col-span-2">
-        <h2 class="text-xl font-bold text-emerald-400 mb-2">3.4 & 3.5 Analog, Digital & Multimedia</h2>
-        <p class="text-slate-300 text-sm"><strong>Analog</strong> data is continuous. <strong>Digital</strong> data is discrete. Converting audio involves <em>Sampling Rate</em> (snapshots per second) and <em>Bit Depth</em> (accuracy of each snapshot).</p>
+        <h2 class="text-xl font-bold text-emerald-400 mb-2">
+          3.4 & 3.5 Analog, Digital & Multimedia
+        </h2>
+        <p class="text-slate-300 text-sm">
+          <strong>Analog</strong> data is continuous. <strong>Digital</strong>{" "}
+          data is discrete. Converting audio involves <em>Sampling Rate</em>{" "}
+          (snapshots per second) and <em>Bit Depth</em> (accuracy of each
+          snapshot).
+        </p>
       </div>
     </div>
   </section>
@@ -25,36 +46,81 @@ import Layout from '../../../layouts/ICTLayout.astro';
   <!-- GAME SECTION -->
   <section class="bg-slate-900 p-6 rounded-2xl border border-cyan-500/30">
     <div class="flex justify-between items-center mb-4">
-      <h2 class="text-2xl font-bold text-cyan-400">🎮 Game: A-to-D Wave Synthesizer</h2>
-      <span class="text-lg font-bold text-emerald-400">Fidelity: <span id="fidelity">0</span>%</span>
+      <h2 class="text-2xl font-bold text-cyan-400">
+        🎮 Game: A-to-D Wave Synthesizer
+      </h2>
+      <span class="text-lg font-bold text-emerald-400">
+        Fidelity: <span id="fidelity">0</span>%
+      </span>
     </div>
-    <p class="text-sm text-amber-400 mb-6">Increase Sampling Rate and Bit Depth to digitize the smooth analog sine wave! Reach 90%+ Fidelity.</p>
+    <p class="text-sm text-amber-400 mb-6">
+      Increase Sampling Rate and Bit Depth to digitize the smooth analog sine
+      wave! Reach 90%+ Fidelity.
+    </p>
 
     <div class="grid md:grid-cols-2 gap-8 items-center">
       <div class="space-y-6">
         <div>
-          <label class="block text-sm text-slate-400 mb-1">Sampling Rate (X-axis slices): <span id="val-sr" class="text-white">2</span> Hz</label>
-          <input type="range" id="slider-sr" min="2" max="44" step="2" value="2" class="w-full accent-cyan-400" oninput="updateWave()">
+          <label class="block text-sm text-slate-400 mb-1">
+            Sampling Rate (X-axis slices):{" "}
+            <span id="val-sr" class="text-white">
+              2
+            </span>{" "}
+            Hz
+          </label>
+          <input
+            type="range"
+            id="slider-sr"
+            min="2"
+            max="44"
+            step="2"
+            value="2"
+            class="w-full accent-cyan-400"
+            oninput="updateWave()"
+          />
         </div>
         <div>
-          <label class="block text-sm text-slate-400 mb-1">Bit Depth (Y-axis steps): <span id="val-bd" class="text-white">2</span> bits</label>
-          <input type="range" id="slider-bd" min="2" max="24" step="2" value="2" class="w-full accent-cyan-400" oninput="updateWave()">
+          <label class="block text-sm text-slate-400 mb-1">
+            Bit Depth (Y-axis steps):{" "}
+            <span id="val-bd" class="text-white">
+              2
+            </span>{" "}
+            bits
+          </label>
+          <input
+            type="range"
+            id="slider-bd"
+            min="2"
+            max="24"
+            step="2"
+            value="2"
+            class="w-full accent-cyan-400"
+            oninput="updateWave()"
+          />
         </div>
       </div>
 
       <div class="bg-slate-950 border border-slate-700 h-48 rounded-xl relative overflow-hidden flex items-center justify-center p-4">
         <!-- Visual representation of the wave -->
-        <div class="absolute w-full h-1 bg-slate-700"></div> <!-- center line -->
-        
+        <div class="absolute w-full h-1 bg-slate-700"></div>
+        <!-- center line -->
+
         <!-- CSS Sine Wave (Analog) -->
         <div class="absolute w-full h-full opacity-30 flex items-center">
-           <svg viewBox="0 0 100 20" class="w-full h-full stroke-emerald-500 fill-transparent" stroke-width="0.5">
-             <path d="M0,10 Q25,0 50,10 T100,10" />
-           </svg>
+          <svg
+            viewBox="0 0 100 20"
+            class="w-full h-full stroke-emerald-500 fill-transparent"
+            stroke-width="0.5"
+          >
+            <path d="M0,10 Q25,0 50,10 T100,10" />
+          </svg>
         </div>
 
         <!-- Digital Blocky Wave (Generated via JS) -->
-        <div id="digital-wave" class="absolute w-full h-full flex items-end justify-between opacity-80 pb-4">
+        <div
+          id="digital-wave"
+          class="absolute w-full h-full flex items-end justify-between opacity-80 pb-4"
+        >
           <!-- Bars appended here -->
         </div>
       </div>
@@ -63,43 +129,46 @@ import Layout from '../../../layouts/ICTLayout.astro';
 
   <script is:inline>
     function updateWave() {
-      const sr = parseInt(document.getElementById('slider-sr').value);
-      const bd = parseInt(document.getElementById('slider-bd').value);
-      
-      document.getElementById('val-sr').innerText = sr;
-      document.getElementById('val-bd').innerText = bd;
+      const sr = parseInt(document.getElementById("slider-sr").value);
+      const bd = parseInt(document.getElementById("slider-bd").value);
 
-      const fidelity = Math.min(100, Math.round(((sr / 44) * 0.5 + (bd / 24) * 0.5) * 100));
-      const fidText = document.getElementById('fidelity');
+      document.getElementById("val-sr").innerText = sr;
+      document.getElementById("val-bd").innerText = bd;
+
+      const fidelity = Math.min(
+        100,
+        Math.round(((sr / 44) * 0.5 + (bd / 24) * 0.5) * 100),
+      );
+      const fidText = document.getElementById("fidelity");
       fidText.innerText = fidelity;
-      
-      if(fidelity >= 90) fidText.className = "text-amber-300 animate-pulse";
+
+      if (fidelity >= 90) fidText.className = "text-amber-300 animate-pulse";
       else fidText.className = "text-emerald-400";
 
       // Draw digital bars
-      const waveContainer = document.getElementById('digital-wave');
-      waveContainer.innerHTML = '';
-      
+      const waveContainer = document.getElementById("digital-wave");
+      waveContainer.innerHTML = "";
+
       const barCount = sr; // More sampling rate = more bars
-      
-      for(let i = 0; i < barCount; i++) {
-        const bar = document.createElement('div');
+
+      for (let i = 0; i < barCount; i++) {
+        const bar = document.createElement("div");
         bar.className = "bg-cyan-500 mx-[1px]";
         bar.style.width = `${100 / barCount}%`;
-        
+
         // Sine calculation mapping to height based on bit depth limitation
         const phase = (i / barCount) * Math.PI * 2;
         let idealHeight = (Math.sin(phase) + 1) * 50; // 0 to 100
-        
+
         // Bit depth quantizes the height (fewer bits = bigger blocky steps)
         const levels = Math.pow(2, Math.min(bd, 6)); // limit for visual sake
-        idealHeight = Math.round(idealHeight / (100/levels)) * (100/levels);
+        idealHeight = Math.round(idealHeight / (100 / levels)) * (100 / levels);
 
         bar.style.height = `${idealHeight}%`;
         waveContainer.appendChild(bar);
       }
     }
-    
+
     // Initial draw
     updateWave();
   </script>

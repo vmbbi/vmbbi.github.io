@@ -1,11 +1,11 @@
 ---
 import ICTLayout from "../../../layouts/ICTLayout.astro";
-import spreadsheet from "../../../assets/spreadsheet.png"
+import spreadsheet from "../../../assets/spreadsheet.png";
 ---
 
-<ICTLayout 
-  title="Chapter 4: Spreadsheet" 
-  chapterNumber="4" 
+<ICTLayout
+  title="Chapter 4: Spreadsheet"
+  chapterNumber="4"
   moduleName="Book A2 - Information Processing"
 >
   <div class="space-y-12 text-slate-200">
@@ -13,15 +13,21 @@ import spreadsheet from "../../../assets/spreadsheet.png"
     <header class="bg-gradient-to-r from-cyan-950/60 to-slate-900 border border-cyan-500/30 rounded-2xl p-6 md:p-8 shadow-xl">
       <div class="flex flex-col md:flex-row gap-8 items-center justify-between">
         <div class="space-y-3 max-w-2xl">
-          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold rounded-full border border-cyan-500/40">BOOK A2 • CHAPTER 4</span>
-          <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Mastering Spreadsheets & Data Modeling</h1>
+          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold rounded-full border border-cyan-500/40">
+            BOOK A2 • CHAPTER 4
+          </span>
+          <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            Mastering Spreadsheets & Data Modeling
+          </h1>
           <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-            Spreadsheets organize data into dynamic grids of rows and columns, enabling automated mathematical calculations, visual reporting, statistical lookups, and "What-If" quantitative scenario analysis.
+            Spreadsheets organize data into dynamic grids of rows and columns,
+            enabling automated mathematical calculations, visual reporting,
+            statistical lookups, and "What-If" quantitative scenario analysis.
           </p>
         </div>
-        <img 
+        <img
           src={spreadsheet.src}
-          alt="Spreadsheet Workspace Visual" 
+          alt="Spreadsheet Workspace Visual"
           class="w-full sm:max-w-md object-cover rounded-xl border border-cyan-500/30 shadow-lg shrink-0"
         />
       </div>
@@ -32,59 +38,154 @@ import spreadsheet from "../../../assets/spreadsheet.png"
       <!-- 4.1 Introduction to Spreadsheet -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.1</span>
-          <h2 class="text-xl font-bold text-white">Introduction to Spreadsheet</h2>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.1
+          </span>
+          <h2 class="text-xl font-bold text-white">
+            Introduction to Spreadsheet
+          </h2>
         </div>
         <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
-          <li><strong>Grid Structure:</strong> Composed of horizontal <em>Rows</em> (numbered 1, 2, 3...) and vertical <em>Columns</em> (lettered A, B, C...).</li>
-          <li><strong>Worksheet vs. Workbook:</strong> A single page is a <em>Worksheet</em>; a file containing multiple worksheets is a <em>Workbook</em>.</li>
-          <li><strong>Cell & Cell Range:</strong> The intersection of a row and column is a <em>Cell</em> (e.g., <code class="bg-slate-800 text-cyan-300 px-1 rounded">B4</code>). A rectangular block of cells is a <em>Range</em> (e.g., <code class="bg-slate-800 text-cyan-300 px-1 rounded">A1:C10</code>).</li>
-          <li><strong>Primary Applications:</strong> Financial budgeting, statistical computation, data visualization, and financial forecasting.</li>
+          <li>
+            <strong>Grid Structure:</strong> Composed of horizontal{" "}
+            <em>Rows</em> (numbered 1, 2, 3...) and vertical <em>Columns</em>{" "}
+            (lettered A, B, C...).
+          </li>
+          <li>
+            <strong>Worksheet vs. Workbook:</strong> A single page is a{" "}
+            <em>Worksheet</em>; a file containing multiple worksheets is a{" "}
+            <em>Workbook</em>.
+          </li>
+          <li>
+            <strong>Cell & Cell Range:</strong> The intersection of a row and
+            column is a <em>Cell</em> (e.g.,{" "}
+            <code class="bg-slate-800 text-cyan-300 px-1 rounded">B4</code>). A
+            rectangular block of cells is a <em>Range</em> (e.g.,{" "}
+            <code class="bg-slate-800 text-cyan-300 px-1 rounded">A1:C10</code>
+            ).
+          </li>
+          <li>
+            <strong>Primary Applications:</strong> Financial budgeting,
+            statistical computation, data visualization, and financial
+            forecasting.
+          </li>
         </ul>
       </section>
 
       <!-- 4.2 Data Entry -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.2</span>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.2
+          </span>
           <h2 class="text-xl font-bold text-white">Data Entry & Formatting</h2>
         </div>
         <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
-          <li><strong>Data Types:</strong> Text (Labels - aligned left), Numbers (Values - aligned right), Date/Time, and Formulas.</li>
-          <li><strong>Number Formatting:</strong> Currency (<code class="text-emerald-400">$ / HKD</code>), Percentage (<code class="text-emerald-400">%</code>), Decimal Places, and Scientific Notation.</li>
-          <li><strong>AutoFill / Fill Handle:</strong> Dragging the small square in the bottom-right corner of a cell automatically extends sequences (e.g., Jan, Feb, Mar or 1, 2, 3) or copies formulas.</li>
-          <li><strong>Data Validation:</strong> Restricts cell entries to valid criteria (e.g., whole numbers between 0 and 100).</li>
+          <li>
+            <strong>Data Types:</strong> Text (Labels - aligned left), Numbers
+            (Values - aligned right), Date/Time, and Formulas.
+          </li>
+          <li>
+            <strong>Number Formatting:</strong> Currency (
+            <code class="text-emerald-400">$ / HKD</code>), Percentage (
+            <code class="text-emerald-400">%</code>), Decimal Places, and
+            Scientific Notation.
+          </li>
+          <li>
+            <strong>AutoFill / Fill Handle:</strong> Dragging the small square
+            in the bottom-right corner of a cell automatically extends sequences
+            (e.g., Jan, Feb, Mar or 1, 2, 3) or copies formulas.
+          </li>
+          <li>
+            <strong>Data Validation:</strong> Restricts cell entries to valid
+            criteria (e.g., whole numbers between 0 and 100).
+          </li>
         </ul>
       </section>
 
       <!-- 4.3 Formula -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.3</span>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.3
+          </span>
           <h2 class="text-xl font-bold text-white">Formulas & Operators</h2>
         </div>
         <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
-          <li><strong>Syntax Rule:</strong> All formulas MUST begin with an equals sign (<code class="text-amber-400 font-mono font-bold">=</code>). E.g., <code class="text-amber-300 font-mono">=A1 + B1</code>.</li>
-          <li><strong>Arithmetic Operators:</strong> <code class="font-mono text-cyan-300">+</code> (Add), <code class="font-mono text-cyan-300">-</code> (Subtract), <code class="font-mono text-cyan-300">*</code> (Multiply), <code class="font-mono text-cyan-300">/</code> (Divide), <code class="font-mono text-cyan-300">^</code> (Exponentiation).</li>
-          <li><strong>Comparison Operators:</strong> <code class="font-mono text-cyan-300">=</code>, <code class="font-mono text-cyan-300">&gt;</code>, <code class="font-mono text-cyan-300">&lt;</code>, <code class="font-mono text-cyan-300">&gt;=</code>, <code class="font-mono text-cyan-300">&lt;=</code>, <code class="font-mono text-cyan-300">&lt;&gt;</code> (Not equal).</li>
-          <li><strong>Precedence Order (BODMAS):</strong> Parentheses <code class="font-mono text-cyan-300">()</code> &gt; Exponents <code class="font-mono text-cyan-300">^</code> &gt; Multiplication/Division <code class="font-mono text-cyan-300">*/</code> &gt; Addition/Subtraction <code class="font-mono text-cyan-300">+-</code>.</li>
+          <li>
+            <strong>Syntax Rule:</strong> All formulas MUST begin with an equals
+            sign (<code class="text-amber-400 font-mono font-bold">=</code>).
+            E.g., <code class="text-amber-300 font-mono">=A1 + B1</code>.
+          </li>
+          <li>
+            <strong>Arithmetic Operators:</strong>{" "}
+            <code class="font-mono text-cyan-300">+</code> (Add),{" "}
+            <code class="font-mono text-cyan-300">-</code> (Subtract),{" "}
+            <code class="font-mono text-cyan-300">*</code> (Multiply),{" "}
+            <code class="font-mono text-cyan-300">/</code> (Divide),{" "}
+            <code class="font-mono text-cyan-300">^</code> (Exponentiation).
+          </li>
+          <li>
+            <strong>Comparison Operators:</strong>{" "}
+            <code class="font-mono text-cyan-300">=</code>,{" "}
+            <code class="font-mono text-cyan-300">&gt;</code>,{" "}
+            <code class="font-mono text-cyan-300">&lt;</code>,{" "}
+            <code class="font-mono text-cyan-300">&gt;=</code>,{" "}
+            <code class="font-mono text-cyan-300">&lt;=</code>,{" "}
+            <code class="font-mono text-cyan-300">&lt;&gt;</code> (Not equal).
+          </li>
+          <li>
+            <strong>Precedence Order (BODMAS):</strong> Parentheses{" "}
+            <code class="font-mono text-cyan-300">()</code> &gt; Exponents{" "}
+            <code class="font-mono text-cyan-300">^</code> &gt;
+            Multiplication/Division{" "}
+            <code class="font-mono text-cyan-300">*/</code> &gt;
+            Addition/Subtraction <code class="font-mono text-cyan-300">+-</code>
+            .
+          </li>
         </ul>
       </section>
 
       <!-- 4.4 Function -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.4</span>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.4
+          </span>
           <h2 class="text-xl font-bold text-white">Built-in Functions</h2>
         </div>
         <div class="space-y-2 text-sm text-slate-300">
-          <p>Predefined formulas that take arguments and return calculated results:</p>
+          <p>
+            Predefined formulas that take arguments and return calculated
+            results:
+          </p>
           <div class="bg-slate-950 p-3 rounded font-mono text-xs text-cyan-200 border border-slate-800 space-y-1">
-            <p><strong class="text-amber-300">SUM / AVERAGE / MAX / MIN:</strong> Basic statistics over ranges.</p>
-            <p><strong class="text-amber-300">COUNT vs COUNTA:</strong> <code class="text-white">COUNT</code> counts numbers only; <code class="text-white">COUNTA</code> counts non-empty cells.</p>
-            <p><strong class="text-amber-300">COUNTIF / SUMIF:</strong> Performs conditional counting/summation (e.g., <code class="text-white">=COUNTIF(A1:A10, "&gt;50")</code>).</p>
-            <p><strong class="text-amber-300">IF(logical_test, value_if_true, value_if_false):</strong> Conditional evaluation.</p>
-            <p><strong class="text-amber-300">VLOOKUP(lookup_val, table_array, col_idx, [range_lookup]):</strong> Vertical lookup table search.</p>
+            <p>
+              <strong class="text-amber-300">SUM / AVERAGE / MAX / MIN:</strong>{" "}
+              Basic statistics over ranges.
+            </p>
+            <p>
+              <strong class="text-amber-300">COUNT vs COUNTA:</strong>{" "}
+              <code class="text-white">COUNT</code> counts numbers only;{" "}
+              <code class="text-white">COUNTA</code> counts non-empty cells.
+            </p>
+            <p>
+              <strong class="text-amber-300">COUNTIF / SUMIF:</strong> Performs
+              conditional counting/summation (e.g.,{" "}
+              <code class="text-white">=COUNTIF(A1:A10, "&gt;50")</code>).
+            </p>
+            <p>
+              <strong class="text-amber-300">
+                IF(logical_test, value_if_true, value_if_false):
+              </strong>{" "}
+              Conditional evaluation.
+            </p>
+            <p>
+              <strong class="text-amber-300">
+                VLOOKUP(lookup_val, table_array, col_idx, [range_lookup]):
+              </strong>{" "}
+              Vertical lookup table search.
+            </p>
           </div>
         </div>
       </section>
@@ -92,18 +193,34 @@ import spreadsheet from "../../../assets/spreadsheet.png"
       <!-- 4.5 Cell Reference -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.5</span>
-          <h2 class="text-xl font-bold text-white">Cell Addressing & References</h2>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.5
+          </span>
+          <h2 class="text-xl font-bold text-white">
+            Cell Addressing & References
+          </h2>
         </div>
         <div class="space-y-3 text-sm text-slate-300">
           <div class="p-2 bg-slate-950 rounded border-l-4 border-cyan-400">
-            <strong class="text-cyan-300">Relative Reference (<code class="text-white">A1</code>):</strong> Automatically adjusts row/column offsets when copied to another cell.
+            <strong class="text-cyan-300">
+              Relative Reference (<code class="text-white">A1</code>):
+            </strong>{" "}
+            Automatically adjusts row/column offsets when copied to another
+            cell.
           </div>
           <div class="p-2 bg-slate-950 rounded border-l-4 border-amber-400">
-            <strong class="text-amber-300">Absolute Reference (<code class="text-white">$A$1</code>):</strong> Locks both column and row so the reference remains fixed when copied.
+            <strong class="text-amber-300">
+              Absolute Reference (<code class="text-white">$A$1</code>):
+            </strong>{" "}
+            Locks both column and row so the reference remains fixed when
+            copied.
           </div>
           <div class="p-2 bg-slate-950 rounded border-l-4 border-emerald-400">
-            <strong class="text-emerald-300">Mixed Reference (<code class="text-white">$A1</code> or <code class="text-white">A$1</code>):</strong> Locks either the column OR the row independently.
+            <strong class="text-emerald-300">
+              Mixed Reference (<code class="text-white">$A1</code> or{" "}
+              <code class="text-white">A$1</code>):
+            </strong>{" "}
+            Locks either the column OR the row independently.
           </div>
         </div>
       </section>
@@ -111,18 +228,41 @@ import spreadsheet from "../../../assets/spreadsheet.png"
       <!-- 4.6 Data Manipulation and Presentation -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.6</span>
-          <h2 class="text-xl font-bold text-white">Manipulation & Presentation</h2>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.6
+          </span>
+          <h2 class="text-xl font-bold text-white">
+            Manipulation & Presentation
+          </h2>
         </div>
         <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
-          <li><strong>Sorting:</strong> Rearranging rows in Ascending (A-Z, 0-9) or Descending order across single or multiple keys.</li>
-          <li><strong>Filtering (AutoFilter):</strong> Displaying only rows that meet defined criteria while hiding non-matching rows.</li>
-          <li><strong>Conditional Formatting:</strong> Dynamically applies cell colors, data bars, or icons based on specified value thresholds.</li>
-          <li><strong>Chart Selection:</strong>
+          <li>
+            <strong>Sorting:</strong> Rearranging rows in Ascending (A-Z, 0-9)
+            or Descending order across single or multiple keys.
+          </li>
+          <li>
+            <strong>Filtering (AutoFilter):</strong> Displaying only rows that
+            meet defined criteria while hiding non-matching rows.
+          </li>
+          <li>
+            <strong>Conditional Formatting:</strong> Dynamically applies cell
+            colors, data bars, or icons based on specified value thresholds.
+          </li>
+          <li>
+            <strong>Chart Selection:</strong>
             <ul class="list-circle pl-4 text-xs text-slate-400 space-y-1 mt-1">
-              <li>• <strong>Bar / Column:</strong> Comparing values across distinct categories.</li>
-              <li>• <strong>Line Chart:</strong> Showing continuous trends over time.</li>
-              <li>• <strong>Pie Chart:</strong> Representing proportions/percentages of a whole.</li>
+              <li>
+                • <strong>Bar / Column:</strong> Comparing values across
+                distinct categories.
+              </li>
+              <li>
+                • <strong>Line Chart:</strong> Showing continuous trends over
+                time.
+              </li>
+              <li>
+                • <strong>Pie Chart:</strong> Representing
+                proportions/percentages of a whole.
+              </li>
             </ul>
           </li>
         </ul>
@@ -131,24 +271,41 @@ import spreadsheet from "../../../assets/spreadsheet.png"
       <!-- 4.7 Data Analysis -->
       <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 md:col-span-2 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-3 mb-4">
-          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">4.7</span>
-          <h2 class="text-xl font-bold text-white">Data Analysis: What-If & Pivot Tables</h2>
+          <span class="bg-cyan-500/20 text-cyan-400 font-mono font-bold px-2.5 py-1 rounded text-sm">
+            4.7
+          </span>
+          <h2 class="text-xl font-bold text-white">
+            Data Analysis: What-If & Pivot Tables
+          </h2>
         </div>
         <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
-            <h3 class="font-bold text-cyan-300 mb-2">💡 What-If Scenario Analysis</h3>
+            <h3 class="font-bold text-cyan-300 mb-2">
+              💡 What-If Scenario Analysis
+            </h3>
             <p class="text-xs leading-relaxed text-slate-400">
-              Testing how changes in input values affect calculated formula outputs.
+              Testing how changes in input values affect calculated formula
+              outputs.
             </p>
             <ul class="list-disc pl-4 mt-2 text-xs text-slate-300 space-y-1">
-              <li><strong>Goal Seek:</strong> Adjusts a single specified input cell automatically until a formula reaches a desired target value.</li>
-              <li><strong>Scenario Manager:</strong> Saves multiple sets of input parameters to compare named scenarios (e.g., Best Case vs. Worst Case).</li>
+              <li>
+                <strong>Goal Seek:</strong> Adjusts a single specified input
+                cell automatically until a formula reaches a desired target
+                value.
+              </li>
+              <li>
+                <strong>Scenario Manager:</strong> Saves multiple sets of input
+                parameters to compare named scenarios (e.g., Best Case vs. Worst
+                Case).
+              </li>
             </ul>
           </div>
           <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
             <h3 class="font-bold text-cyan-300 mb-2">📊 Pivot Tables</h3>
             <p class="text-xs leading-relaxed text-slate-400">
-              An interactive summary tool that dynamically aggregates, groups, filters, and cross-tabulates large volumes of data without altering the original dataset.
+              An interactive summary tool that dynamically aggregates, groups,
+              filters, and cross-tabulates large volumes of data without
+              altering the original dataset.
             </p>
           </div>
         </div>
@@ -159,12 +316,26 @@ import spreadsheet from "../../../assets/spreadsheet.png"
     <section class="bg-gradient-to-b from-slate-900 to-cyan-950 p-6 md:p-8 rounded-2xl border-2 border-cyan-500/40 shadow-2xl">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-cyan-500/30 pb-4">
         <div>
-          <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">CHAPTER 4 INTERACTIVE CHALLENGE</span>
-          <h2 class="text-2xl md:text-3xl font-black text-cyan-300">📊 Spreadsheet Formula Arena</h2>
+          <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+            CHAPTER 4 INTERACTIVE CHALLENGE
+          </span>
+          <h2 class="text-2xl md:text-3xl font-black text-cyan-300">
+            📊 Spreadsheet Formula Arena
+          </h2>
         </div>
         <div class="flex gap-4 font-mono text-sm">
-          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">SCORE: <span id="ss-score" class="text-cyan-400 font-bold">0</span></div>
-          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">LIVES: <span id="ss-lives" class="text-red-400 font-bold">❤️❤️❤️</span></div>
+          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">
+            SCORE:{" "}
+            <span id="ss-score" class="text-cyan-400 font-bold">
+              0
+            </span>
+          </div>
+          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">
+            LIVES:{" "}
+            <span id="ss-lives" class="text-red-400 font-bold">
+              ❤️❤️❤️
+            </span>
+          </div>
         </div>
       </div>
 
@@ -183,24 +354,45 @@ import spreadsheet from "../../../assets/spreadsheet.png"
             </thead>
             <tbody>
               <tr class="bg-slate-900 text-slate-300">
-                <td class="p-2 border border-slate-800 font-bold text-slate-500">1</td>
+                <td class="p-2 border border-slate-800 font-bold text-slate-500">
+                  1
+                </td>
                 <td class="p-2 border border-slate-800">Laptop</td>
                 <td class="p-2 border border-slate-800">$8,000</td>
                 <td class="p-2 border border-slate-800">2</td>
-                <td class="p-2 border border-slate-800 text-amber-300 font-bold" id="grid-d1">?</td>
+                <td
+                  class="p-2 border border-slate-800 text-amber-300 font-bold"
+                  id="grid-d1"
+                >
+                  ?
+                </td>
               </tr>
               <tr class="bg-slate-900 text-slate-300">
-                <td class="p-2 border border-slate-800 font-bold text-slate-500">2</td>
+                <td class="p-2 border border-slate-800 font-bold text-slate-500">
+                  2
+                </td>
                 <td class="p-2 border border-slate-800">Mouse</td>
                 <td class="p-2 border border-slate-800">$150</td>
                 <td class="p-2 border border-slate-800">5</td>
-                <td class="p-2 border border-slate-800 text-amber-300 font-bold" id="grid-d2">?</td>
+                <td
+                  class="p-2 border border-slate-800 text-amber-300 font-bold"
+                  id="grid-d2"
+                >
+                  ?
+                </td>
               </tr>
               <tr class="bg-slate-800 text-cyan-300 font-bold">
                 <td class="p-2 border border-slate-700 text-slate-500">3</td>
-                <td class="p-2 border border-slate-700 text-left" colspan="2">DISCOUNT RATE (Cell B3): 10%</td>
+                <td class="p-2 border border-slate-700 text-left" colspan="2">
+                  DISCOUNT RATE (Cell B3): 10%
+                </td>
                 <td class="p-2 border border-slate-700 text-right">SUM:</td>
-                <td class="p-2 border border-slate-700 text-emerald-400" id="grid-d3">?</td>
+                <td
+                  class="p-2 border border-slate-700 text-emerald-400"
+                  id="grid-d3"
+                >
+                  ?
+                </td>
               </tr>
             </tbody>
           </table>
@@ -208,8 +400,15 @@ import spreadsheet from "../../../assets/spreadsheet.png"
 
         <!-- Question Prompt -->
         <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
-          <span class="text-xs font-mono text-cyan-400 block mb-1">QUESTION <span id="ss-qnum">1</span> OF 4</span>
-          <p id="ss-question" class="text-sm md:text-base font-medium text-white">Loading challenge...</p>
+          <span class="text-xs font-mono text-cyan-400 block mb-1">
+            QUESTION <span id="ss-qnum">1</span> OF 4
+          </span>
+          <p
+            id="ss-question"
+            class="text-sm md:text-base font-medium text-white"
+          >
+            Loading challenge...
+          </p>
         </div>
 
         <!-- Options / Inputs -->
@@ -228,26 +427,31 @@ import spreadsheet from "../../../assets/spreadsheet.png"
         q: "Write the correct formula for cell D1 to calculate the total price (Price * Qty).",
         opts: ["=B1*C1", "B1*C1", "=SUM(B1:C1)", "=MULTIPLY(B1,C1)"],
         ans: "=B1*C1",
-        gridUpdate: { d1: "$16,000" }
+        gridUpdate: { d1: "$16,000" },
       },
       {
         q: "If cell D1's formula is copied down to D2, what does the relative formula in D2 automatically become?",
         opts: ["=B2*C2", "=$B$1*$C$1", "=B1*C1", "=SUM(B2:C2)"],
         ans: "=B2*C2",
-        gridUpdate: { d2: "$750" }
+        gridUpdate: { d2: "$750" },
       },
       {
         q: "We want to write a formula in E1 for Discount Amount (=D1 * B3). If we drag this formula down to E2, how must cell B3 be referenced?",
-        opts: ["=$B$3 (Absolute Reference)", "=B3 (Relative Reference)", "=B$3 (Mixed Reference)", "both $B$3 and B$3 will work"],
+        opts: [
+          "=$B$3 (Absolute Reference)",
+          "=B3 (Relative Reference)",
+          "=B$3 (Mixed Reference)",
+          "both $B$3 and B$3 will work",
+        ],
         ans: "both $B$3 and B$3 will work",
-        gridUpdate: {}
+        gridUpdate: {},
       },
       {
         q: "Which built-in analysis tool automatically calculates the exact Quantity (C1) needed to reach a Target Grand Total of $20,000?",
         opts: ["Goal Seek", "AutoFilter", "Pivot Table", "Data Validation"],
         ans: "Goal Seek",
-        gridUpdate: { d3: "$20,000" }
-      }
+        gridUpdate: { d3: "$20,000" },
+      },
     ];
 
     let ssIdx = 0;
@@ -256,21 +460,24 @@ import spreadsheet from "../../../assets/spreadsheet.png"
 
     function renderSSQuestion() {
       if (ssIdx >= ssQuestions.length) {
-        document.getElementById('ss-question').innerText = "🏆 ARENA COMPLETED! Excellent Spreadsheet Mastery!";
-        document.getElementById('ss-options').innerHTML = `<button onclick="resetSSGame()" class="col-span-2 py-3 bg-cyan-600 hover:bg-cyan-500 font-bold rounded-lg text-white">Play Again</button>`;
+        document.getElementById("ss-question").innerText =
+          "🏆 ARENA COMPLETED! Excellent Spreadsheet Mastery!";
+        document.getElementById("ss-options").innerHTML =
+          `<button onclick="resetSSGame()" class="col-span-2 py-3 bg-cyan-600 hover:bg-cyan-500 font-bold rounded-lg text-white">Play Again</button>`;
         return;
       }
 
       const cur = ssQuestions[ssIdx];
-      document.getElementById('ss-qnum').innerText = ssIdx + 1;
-      document.getElementById('ss-question').innerText = cur.q;
-      document.getElementById('ss-feedback').innerText = "";
+      document.getElementById("ss-qnum").innerText = ssIdx + 1;
+      document.getElementById("ss-question").innerText = cur.q;
+      document.getElementById("ss-feedback").innerText = "";
 
-      const optContainer = document.getElementById('ss-options');
+      const optContainer = document.getElementById("ss-options");
       optContainer.innerHTML = "";
-      cur.opts.forEach(opt => {
-        const btn = document.createElement('button');
-        btn.className = "p-3 bg-slate-800 hover:bg-cyan-900 border border-slate-700 hover:border-cyan-400 rounded-lg text-left text-sm font-mono transition text-slate-200";
+      cur.opts.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.className =
+          "p-3 bg-slate-800 hover:bg-cyan-900 border border-slate-700 hover:border-cyan-400 rounded-lg text-left text-sm font-mono transition text-slate-200";
         btn.innerText = opt;
         btn.onclick = () => checkSSAns(opt);
         optContainer.appendChild(btn);
@@ -279,29 +486,34 @@ import spreadsheet from "../../../assets/spreadsheet.png"
 
     function checkSSAns(selected) {
       const cur = ssQuestions[ssIdx];
-      const fb = document.getElementById('ss-feedback');
+      const fb = document.getElementById("ss-feedback");
 
       if (selected === cur.ans) {
         ssScore += 25;
-        document.getElementById('ss-score').innerText = ssScore;
+        document.getElementById("ss-score").innerText = ssScore;
         fb.innerText = "✅ Correct Formula/Concept!";
-        fb.className = "text-center font-bold text-sm h-6 text-emerald-400 animate-pulse";
-        
+        fb.className =
+          "text-center font-bold text-sm h-6 text-emerald-400 animate-pulse";
+
         // Update visual table
-        if (cur.gridUpdate.d1) document.getElementById('grid-d1').innerText = cur.gridUpdate.d1;
-        if (cur.gridUpdate.d2) document.getElementById('grid-d2').innerText = cur.gridUpdate.d2;
-        if (cur.gridUpdate.d3) document.getElementById('grid-d3').innerText = cur.gridUpdate.d3;
+        if (cur.gridUpdate.d1)
+          document.getElementById("grid-d1").innerText = cur.gridUpdate.d1;
+        if (cur.gridUpdate.d2)
+          document.getElementById("grid-d2").innerText = cur.gridUpdate.d2;
+        if (cur.gridUpdate.d3)
+          document.getElementById("grid-d3").innerText = cur.gridUpdate.d3;
 
         ssIdx++;
         setTimeout(renderSSQuestion, 1500);
       } else {
         ssLives--;
-        document.getElementById('ss-lives').innerText = "❤️".repeat(ssLives);
+        document.getElementById("ss-lives").innerText = "❤️".repeat(ssLives);
         fb.innerText = `❌ Incorrect. Try again!`;
         fb.className = "text-center font-bold text-sm h-6 text-red-400";
         if (ssLives <= 0) {
           fb.innerText = "💥 Game Over! Refresh to retry.";
-          document.getElementById('ss-options').innerHTML = `<button onclick="resetSSGame()" class="col-span-2 py-3 bg-red-600 hover:bg-red-500 font-bold rounded-lg text-white">Retry Arena</button>`;
+          document.getElementById("ss-options").innerHTML =
+            `<button onclick="resetSSGame()" class="col-span-2 py-3 bg-red-600 hover:bg-red-500 font-bold rounded-lg text-white">Retry Arena</button>`;
         }
       }
     }
@@ -310,11 +522,11 @@ import spreadsheet from "../../../assets/spreadsheet.png"
       ssIdx = 0;
       ssScore = 0;
       ssLives = 3;
-      document.getElementById('ss-score').innerText = "0";
-      document.getElementById('ss-lives').innerText = "❤️❤️❤️";
-      document.getElementById('grid-d1').innerText = "?";
-      document.getElementById('grid-d2').innerText = "?";
-      document.getElementById('grid-d3').innerText = "?";
+      document.getElementById("ss-score").innerText = "0";
+      document.getElementById("ss-lives").innerText = "❤️❤️❤️";
+      document.getElementById("grid-d1").innerText = "?";
+      document.getElementById("grid-d2").innerText = "?";
+      document.getElementById("grid-d3").innerText = "?";
       renderSSQuestion();
     }
 

@@ -8,17 +8,17 @@ const imageSize = frontmatter.image.size || "300px";
 <BaseLayout pageTitle={frontmatter.title}>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <p><em>{frontmatter.description}</em></p>
+  <p>
+    <em>{frontmatter.description}</em>
+  </p>
   <p>Written by: {frontmatter.author}</p>
   <slot />
   <div class="tags">
-    {
-      frontmatter.tags.map((tag: string) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
+    {frontmatter.tags.map((tag: string) => (
+      <p class="tag">
+        <a href={`/tags/${tag}`}>{tag}</a>
+      </p>
+    ))}
   </div>
 </BaseLayout>
 <style>
