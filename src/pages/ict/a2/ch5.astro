@@ -1,0 +1,298 @@
+---
+import ICTLayout from "../../../layouts/ICTLayout.astro";
+---
+
+<ICTLayout 
+  title="Chapter 5: Relational Database" 
+  chapterNumber="5" 
+  moduleName="Book A2 - Information Processing"
+>
+  <div class="space-y-12 text-slate-200">
+    <!-- HERO / OVERVIEW BANNER -->
+    <header class="bg-gradient-to-r from-amber-950/60 to-slate-900 border border-amber-500/30 rounded-2xl p-6 md:p-8 shadow-xl">
+      <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
+        <div class="space-y-3 max-w-2xl">
+          <span class="px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-mono font-bold rounded-full border border-amber-500/40">BOOK A2 • CHAPTER 5</span>
+          <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Relational Database Systems (RDBMS)</h1>
+          <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+            Databases provide structured, multi-user storage with strict data integrity, normalized table relationships, automated SQL querying, and zero data redundancy.
+          </p>
+        </div>
+        <img 
+          src="/watermarked_img_17318849709068309373.jpg" 
+          alt="Relational Database Architecture Visual" 
+          class="w-full md:w-64 h-40 object-cover rounded-xl border border-amber-500/30 shadow-lg"
+        />
+      </div>
+    </header>
+
+    <!-- SUBCHAPTER KEY POINTS GRID -->
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- 5.1 Introduction to Database -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.1</span>
+          <h2 class="text-xl font-bold text-white">Database vs. Spreadsheet</h2>
+        </div>
+        <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
+          <li><strong>Database Management System (DBMS):</strong> Software that creates, manages, and queries structured relational data (e.g., MS Access, MySQL).</li>
+          <li><strong>Database vs. Spreadsheet:</strong>
+            <ul class="list-circle pl-4 text-xs text-slate-400 space-y-1 mt-1">
+              <li>• <em>Spreadsheet:</em> Best for quick single-user calculations and visual charts.</li>
+              <li>• <em>Database:</em> Best for multi-user, massive data volumes, multi-table queries, and enforcing data integrity.</li>
+            </ul>
+          </li>
+          <li><strong>Eliminating Data Redundancy:</strong> Relational structures prevent duplicate data entries, avoiding insertion, deletion, and update anomalies.</li>
+        </ul>
+      </section>
+
+      <!-- 5.2 Access Objects -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.2</span>
+          <h2 class="text-xl font-bold text-white">Database Objects</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <strong class="text-amber-300 block mb-1">📋 Table</strong>
+            Stores raw records in rows (tuples) and fields in columns (attributes).
+          </div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <strong class="text-amber-300 block mb-1">🔍 Query</strong>
+            Retrieves, filters, sorts, and transforms specific data from tables.
+          </div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <strong class="text-amber-300 block mb-1">🖼️ Form</strong>
+            User-friendly visual UI for data entry and record editing.
+          </div>
+          <div class="bg-slate-950 p-3 rounded border border-slate-800">
+            <strong class="text-amber-300 block mb-1">🖨️ Report</strong>
+            Formatted print/export layout summarizing database information.
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.3 Database Structure -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.3</span>
+          <h2 class="text-xl font-bold text-white">Database Keys & Field Properties</h2>
+        </div>
+        <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
+          <li><strong>Primary Key (PK):</strong> A field that uniquely identifies each record in a table. <span class="text-red-400">Must NOT be Null</span> and must contain unique values.</li>
+          <li><strong>Foreign Key (FK):</strong> A field in one table that references the Primary Key of another table to link them.</li>
+          <li><strong>Composite Key:</strong> A primary key formed by combining two or more fields together.</li>
+          <li><strong>Field Properties:</strong>
+            <span class="block text-xs text-slate-400 font-mono mt-1">
+              Field Size • Format • Validation Rule (e.g. <code class="text-amber-300">&gt;=0 AND &lt;=100</code>) • Validation Text • Required • Default Value
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5.4 Database Design -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.4</span>
+          <h2 class="text-xl font-bold text-white">ER Modeling & Normalization</h2>
+        </div>
+        <div class="space-y-3 text-sm text-slate-300">
+          <p><strong>Relationships:</strong> 1-to-1 (1:1), 1-to-Many (1:N), Many-to-Many (M:N - requires a junction table).</p>
+          <div class="bg-slate-950 p-3 rounded font-mono text-xs border border-slate-800 space-y-1">
+            <p><strong class="text-amber-300">1NF (First Normal Form):</strong> All attributes are atomic (no repeating groups or multi-valued fields).</p>
+            <p><strong class="text-amber-300">2NF (Second Normal Form):</strong> In 1NF + eliminate partial functional dependencies on composite keys.</p>
+            <p><strong class="text-amber-300">3NF (Third Normal Form):</strong> In 2NF + eliminate transitive dependencies (non-key fields depending on other non-key fields).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.5 Data Manipulation -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.5</span>
+          <h2 class="text-xl font-bold text-white">Data Manipulation & Integrity</h2>
+        </div>
+        <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
+          <li><strong>CRUD Operations:</strong> Create (Insert), Read (Select), Update, Delete.</li>
+          <li><strong>Referential Integrity:</strong> A system rule enforcing that a Foreign Key value must either match an existing Primary Key value in the parent table or be Null.</li>
+          <li><strong>Cascade Operations:</strong>
+            <ul class="list-circle pl-4 text-xs text-slate-400 space-y-1 mt-1">
+              <li>• <em>Cascade Update:</em> Updating a PK automatically updates all matching FK records.</li>
+              <li>• <em>Cascade Delete:</em> Deleting a PK parent record automatically deletes corresponding child FK records to prevent "orphan records".</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5.6 Basic Query -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.6</span>
+          <h2 class="text-xl font-bold text-white">Query Criteria & Design Grid</h2>
+        </div>
+        <ul class="space-y-2 text-sm text-slate-300 list-disc pl-5 leading-relaxed">
+          <li><strong>Query Design Grid Elements:</strong> Field, Table, Sort (Ascending/Descending), Show (checkbox), Criteria, Or.</li>
+          <li><strong>Common Operators:</strong> <code class="font-mono text-amber-300">AND</code>, <code class="font-mono text-amber-300">OR</code>, <code class="font-mono text-amber-300">NOT</code>, <code class="font-mono text-amber-300">BETWEEN x AND y</code>, <code class="font-mono text-amber-300">IN ("A", "B")</code>.</li>
+          <li><strong>Wildcard Characters:</strong>
+            <ul class="list-circle pl-4 text-xs text-slate-400 space-y-1 mt-1">
+              <li>• <code class="text-amber-300">LIKE "A*"</code> matches any string starting with 'A'.</li>
+              <li>• <code class="text-amber-300">LIKE "C?T"</code> matches CAT, COT, CUT.</li>
+            </ul>
+          </li>
+          <li><strong>Parameter Query:</strong> Encloses a prompt in square brackets (e.g. <code class="font-mono text-amber-300">[Enter City:]</code>) to request criteria at runtime.</li>
+        </ul>
+      </section>
+
+      <!-- 5.7 Access Functions -->
+      <section class="bg-slate-900/90 border border-slate-800 rounded-xl p-6 md:col-span-2 hover:border-amber-500/40 transition">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="bg-amber-500/20 text-amber-400 font-mono font-bold px-2.5 py-1 rounded text-sm">5.7</span>
+          <h2 class="text-xl font-bold text-white">Aggregate Functions & Calculated Fields</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <h3 class="font-bold text-amber-300 mb-2">⚡ Total Row & Grouping</h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-2">
+              Using the <code class="text-amber-300">Group By</code> clause aggregates records sharing identical category values.
+            </p>
+            <p class="font-mono text-xs text-cyan-300">Functions: SUM(), AVG(), COUNT(), MAX(), MIN()</p>
+          </div>
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800">
+            <h3 class="font-bold text-amber-300 mb-2">🧮 Calculated Fields</h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-2">
+              Computes new values dynamically during query execution without storing them permanently in tables.
+            </p>
+            <p class="font-mono text-xs text-amber-300">Syntax: TotalPrice: [Quantity] * [UnitPrice]</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- GAME SECTION -->
+    <section class="bg-gradient-to-b from-slate-900 to-amber-950 p-6 md:p-8 rounded-2xl border-2 border-amber-500/40 shadow-2xl">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 border-b border-amber-500/30 pb-4">
+        <div>
+          <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest">CHAPTER 5 INTERACTIVE CHALLENGE</span>
+          <h2 class="text-2xl md:text-3xl font-black text-amber-300">🗄️ SQL & Query Architect Quest</h2>
+        </div>
+        <div class="flex gap-4 font-mono text-sm">
+          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">SCORE: <span id="db-score" class="text-amber-400 font-bold">0</span></div>
+          <div class="bg-slate-900 px-4 py-2 rounded-lg border border-slate-700">LEVEL: <span id="db-lvl" class="text-cyan-400 font-bold">1</span>/4</div>
+        </div>
+      </div>
+
+      <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 max-w-3xl mx-auto space-y-6">
+        <!-- Interactive Schema Visualizer -->
+        <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+          <div class="bg-slate-900 p-3 rounded border border-amber-500/40">
+            <div class="bg-amber-500/20 text-amber-300 p-1 font-bold rounded mb-2">TABLE: Students</div>
+            <p class="text-emerald-400 font-bold">🔑 StudentID (PK)</p>
+            <p class="text-slate-300">Name</p>
+            <p class="text-slate-300">Class</p>
+          </div>
+          <div class="bg-slate-900 p-3 rounded border border-cyan-500/40">
+            <div class="bg-cyan-500/20 text-cyan-300 p-1 font-bold rounded mb-2">TABLE: Enrollments</div>
+            <p class="text-emerald-400 font-bold">🔑 EnrollmentID (PK)</p>
+            <p class="text-amber-400 font-bold">🔗 StudentID (FK)</p>
+            <p class="text-slate-300">Score</p>
+          </div>
+        </div>
+
+        <!-- Question Box -->
+        <div class="bg-slate-900 p-4 rounded-lg border border-slate-700">
+          <p id="db-question" class="text-sm md:text-base font-medium text-white">Loading database challenge...</p>
+        </div>
+
+        <!-- Options Container -->
+        <div id="db-options" class="grid md:grid-cols-2 gap-3">
+          <!-- Dynamic Buttons -->
+        </div>
+
+        <div id="db-feedback" class="text-center font-bold text-sm h-6"></div>
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    const dbQuestions = [
+      {
+        q: "In the Enrollments table, why is StudentID defined as a Foreign Key (FK)?",
+        opts: [
+          "To link Enrollments back to Students and enforce Referential Integrity",
+          "Because a table can only have one primary key",
+          "To speed up computer processor speed",
+          "To allow duplicate StudentID primary keys"
+        ],
+        ans: "To link Enrollments back to Students and enforce Referential Integrity"
+      },
+      {
+        q: "What query criteria string retrieves all students whose Name begins with the letter 'M'?",
+        opts: ["LIKE 'M*'", "== 'M%'", "STARTSWITH('M')", "IN ('M')"],
+        ans: "LIKE 'M*'"
+      },
+      {
+        q: "A table contains partial functional dependency where a non-key field depends on only part of a composite primary key. Which Normal Form is violated?",
+        opts: ["2NF (Second Normal Form)", "1NF (First Normal Form)", "3NF (Third Normal Form)", "4NF"],
+        ans: "2NF (Second Normal Form)"
+      },
+      {
+        q: "Which Access feature prevents an user from entering 'Score = 150' when valid scores are 0 to 100?",
+        opts: ["Validation Rule: >=0 AND <=100", "Referential Integrity", "Default Value", "Cascade Delete"],
+        ans: "Validation Rule: >=0 AND <=100"
+      }
+    ];
+
+    let dbIdx = 0;
+    let dbScore = 0;
+
+    function renderDBQuestion() {
+      if (dbIdx >= dbQuestions.length) {
+        document.getElementById('db-question').innerText = "🏆 DATABASE ARCHITECT CERTIFIED! You passed Chapter 5!";
+        document.getElementById('db-options').innerHTML = `<button onclick="resetDBGame()" class="col-span-2 py-3 bg-amber-600 hover:bg-amber-500 font-bold rounded-lg text-white">Re-play Quest</button>`;
+        return;
+      }
+
+      const cur = dbQuestions[dbIdx];
+      document.getElementById('db-lvl').innerText = dbIdx + 1;
+      document.getElementById('db-question').innerText = cur.q;
+      document.getElementById('db-feedback').innerText = "";
+
+      const optContainer = document.getElementById('db-options');
+      optContainer.innerHTML = "";
+      cur.opts.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = "p-3 bg-slate-800 hover:bg-amber-900 border border-slate-700 hover:border-amber-400 rounded-lg text-left text-sm transition text-slate-200";
+        btn.innerText = opt;
+        btn.onclick = () => checkDBAns(opt);
+        optContainer.appendChild(btn);
+      });
+    }
+
+    function checkDBAns(selected) {
+      const cur = dbQuestions[dbIdx];
+      const fb = document.getElementById('db-feedback');
+
+      if (selected === cur.ans) {
+        dbScore += 25;
+        document.getElementById('db-score').innerText = dbScore;
+        fb.innerText = "✅ Query Executed Successfully!";
+        fb.className = "text-center font-bold text-sm h-6 text-emerald-400 animate-pulse";
+        dbIdx++;
+        setTimeout(renderDBQuestion, 1500);
+      } else {
+        fb.innerText = "❌ SQL Syntax / Logical Error! Try again.";
+        fb.className = "text-center font-bold text-sm h-6 text-red-400";
+      }
+    }
+
+    function resetDBGame() {
+      dbIdx = 0;
+      dbScore = 0;
+      document.getElementById('db-score').innerText = "0";
+      renderDBQuestion();
+    }
+
+    // Initialize Game
+    renderDBQuestion();
+  </script>
+</ICTLayout>

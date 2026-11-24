@@ -2,7 +2,7 @@ name: Deploy Astro site to Pages
 
 on:
   push:
-    branches: ["master", "maven"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -75,11 +75,9 @@ jobs:
           name: codeberg-pages
           path: ${{ env.BUILD_PATH }}/dist
 
-      - name: Deploy to Codeberg Pages
+      - name: Deploy to Codeberg Pages    
+        working-directory: ${{ env.BUILD_PATH }}/dist
         run: |
-          cd ${{ env.BUILD_PATH }}/dist
-          git clone -b maven --single-branch "https://${{ secrets.CODEBERG_TOKEN }}@codeberg.org/${{ secrets.CODEBERG_USER }}/pages.git" maven
-          rm -rf maven/.git
           git init
           git checkout -b pages
           git config user.name "github-actions[bot]"
